@@ -28,7 +28,7 @@
  *    limitations under the License.
  */
 
-#include "../bson.h"
+#include "bson.h"
 #include <iostream>
 #include <vector>
 
@@ -110,4 +110,3 @@ int main() {
     iter(y);
     return 0;
 }
-

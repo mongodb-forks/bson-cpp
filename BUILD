@@ -22,3 +22,9 @@ cc_library(
     hdrs = ["lib/atomic_int.h", "lib/base64.h", "lib/md5.h", "lib/md5.hpp", "lib/nonce.h"],
     visibility = ["//visibility:private"]
 )
+
+cc_binary(
+    name="bsondemo",
+    srcs = ["bsondemo/bsondemo.cpp"],
+    deps = [":bsoncpp"],
+)

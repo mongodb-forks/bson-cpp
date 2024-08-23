@@ -20,8 +20,10 @@
 #include "lib/nonce.h"
 
 #include <boost/static_assert.hpp>
+#include <type_traits>
 
 BOOST_STATIC_ASSERT( sizeof(bson::OID) == 12 );
+static_assert(std::is_standard_layout<bson::OID>::value == true);
 
 using namespace Nonce;
 

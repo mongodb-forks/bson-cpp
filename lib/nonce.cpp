@@ -16,6 +16,7 @@
  */
 
 #include "nonce.h"
+#include <fstream>
 #include <boost/static_assert.hpp>
 #include <boost/thread/mutex.hpp>
 
@@ -35,7 +36,7 @@ namespace Nonce {
             _initialized = true;
 
       #if defined(__linux__) || defined(__sunos__)
-        _devrandom = new ifstream("/dev/urandom", ios::binary|ios::in);
+        _devrandom = new std::ifstream("/dev/urandom", std::ios::binary|std::ios::in);
         assert(_devrandom->is_open() && "can't open dev/urandom");
       #elif defined(_WIN32)
         srand(time(NULL));

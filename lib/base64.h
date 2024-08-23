@@ -18,6 +18,7 @@
 #pragma once
 
 #include <boost/scoped_array.hpp>
+#include <cstring>
 #include <iostream>
 #include <sstream>
 #include <string>
